@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const mongoURL = process.env.DB_URL
+const mongoURL = "mongodb+srv://pizza:pizza@pizza.ao4k6bj.mongodb.net/pizza?retryWrites=true&w=majority&appName=Pizza"
 
 const connection = {}
 

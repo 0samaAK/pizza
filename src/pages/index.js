@@ -11,7 +11,7 @@ const Home = ({ data }) => {
   console.log(data);
   
   const handleData = () => {
-    if (data.length > 0) {
+    if (data?.length > 0) {
       data?.map((data) => {
         return(
           categories.add(data.category)
@@ -79,6 +79,7 @@ export async function getStaticProps() {
     const pizzaData = await fetch(baseUrl + 'api/foodData', { method:'GET' }).then((response) => response.json()).catch((error) => error.message)
 
     data = await JSON.parse(JSON.stringify(pizzaData))
+    console.log(data);
     
   } catch (error) {
     console.log(error.message);
