@@ -3,7 +3,7 @@ import db from '@/utils/db'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
-const jwtSecret = 'oak'
+const jwtSecret = process.env.JWT_SECRECT
 
 export default async function handler(req, res) {
     let success = false

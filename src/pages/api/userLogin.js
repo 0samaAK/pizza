@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import Users from "@/models/Users";
 import db from "@/utils/db";
 
-const jwtSecret = 'oak'
+const jwtSecret = process.env.JWT_SECRECT
 
 export default async function handler(req, res) {
     let success = false
