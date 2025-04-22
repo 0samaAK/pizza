@@ -11,12 +11,13 @@ const Home = ({ data }) => {
   console.log(data);
   
   const handleData = () => {
-    data?.map((data) => {
-      
-      return(
-        categories.add(data.category)
-      )
-    })
+    if (data.length > 0) {
+      data?.map((data) => {
+        return(
+          categories.add(data.category)
+        )
+      })
+    }
   }
   
   handleData()
