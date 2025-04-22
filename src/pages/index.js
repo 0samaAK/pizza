@@ -8,8 +8,11 @@ const Home = ({ data }) => {
   
   let categories = new Set()
   
+  console.log(data);
+  
   const handleData = () => {
-    data.map((data) => {
+    data?.map((data) => {
+      
       return(
         categories.add(data.category)
       )
@@ -36,7 +39,7 @@ const Home = ({ data }) => {
           <button onClick={()=>{setFilter('Non-Veg')}} className={`border-black rounded-full dark:border-white border-2 py-1.5 px-4 text-lg ${filter === 'Non-Veg' && 'bg-slate-300 dark:bg-slate-600'}`}>Non Veg</button>
         </div>
         {
-          categoryArr.map((category)=>{
+          categoryArr?.map((category)=>{
             return(
             <>
               <div className='text-4xl mt-10 mb-3 uppercase font-bold'>
